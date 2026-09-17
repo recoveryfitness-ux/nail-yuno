@@ -239,7 +239,8 @@ ul, ol { list-style: none; }
 .nav-logo:hover { opacity: 0.75; }
 
 .nav-logo-img {
-  height: 44px;
+  height: 48px;
+  max-width: 180px;
   width: auto;
   object-fit: contain;
   object-position: left center;
