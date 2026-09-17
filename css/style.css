@@ -52,6 +52,8 @@ body {
   color: var(--c-text);
   background-color: var(--c-bg);
   -webkit-font-smoothing: antialiased;
+  word-break: auto-phrase;
+  overflow-wrap: anywhere;
 }
 
 img {
@@ -114,6 +116,7 @@ ul, ol { list-style: none; }
   letter-spacing: 0.04em;
   margin-bottom: 2rem;
   color: var(--c-text);
+  text-wrap: balance;
 }
 
 .section-lead {
@@ -1316,6 +1319,13 @@ ul, ol { list-style: none; }
   }
   .footer-brand { grid-column: 1; }
   .footer-social { flex-direction: row; flex-wrap: wrap; }
+}
+
+/* モバイルでデスクトップ用の強制改行を非表示 */
+@media (max-width: 768px) {
+  .section-title br,
+  .section-lead br,
+  .reservation-text br { display: none; }
 }
 
 /* 極小スマホ (480px以下) */
